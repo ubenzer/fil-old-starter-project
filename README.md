@@ -1,6 +1,8 @@
 Fil Starter Project
 ===================
 
+[![Dependency Status](https://david-dm.org/ubenzer/fil-starter-project.svg)](https://david-dm.org/ubenzer/fil-starter-project) [![devDependency Status](https://david-dm.org/ubenzer/fil-starter-project/dev-status.svg)](https://david-dm.org/ubenzer/fil-starter-project#info=devDependencies)
+
 This repository contains a [fil](https://github.com/ubenzer/fil) project with a decent looking UI and sample posts.
 You can check features of fil and use this project as your starting point.
 
