@@ -1,0 +1,12 @@
+article.card.excerpt(id="#{content.contentId}")
+  .card-contents
+    .date #{content.createDate.locale(global.template.locale).format(global.template.dateFormat)}
+    h1
+      a(href=content.getUrl()) #{content.title}
+    .content !{content.htmlExcerpt}
+  .card-actions
+    a.button.primary(href=content.getUrl())
+      span #{global.template.readContent}
+    .comment-info
+      span.comment-count 0
+      img.icon.comment-icon(src="/img/ic_mode_comment_black_24px.svg")

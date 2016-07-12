@@ -1,0 +1,57 @@
+{
+  "name": "fil-starter-project",
+  "version": "0.0.1",
+  "description": "A starter project with default template and sample contents.",
+  "author": "Umut Benzer <umut@benzer.me>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ubenzer/fil-starter-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ubenzer/fil-starter-project/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "clean-css": "^3.4.18",
+    "http-server": "^0.9.0",
+    "imagemin-cli": "^3.0.0",
+    "mkdirp": "^0.5.1",
+    "npm-run-all": "^2.3.0",
+    "onchange": "^2.5.0",
+    "shx": "^0.1.2",
+    "stylus": "^0.54.5",
+    "uglify-js": "^2.7.0"
+  },
+  "scripts": {
+    "compile": "npm run js:dist && npm run css:dist && npm run img:dist && npm run robots",
+    "js": "./node_modules/.bin/browserify ./site/index.js -d -o ./dist/index.js -t [ babelify --presets [ es2015 ] ]",
+    "js:dist": "npm run js && ./node_modules/.bin/uglifyjs -c --output ./dist/index.js ./dist/index.js",
+    "css": "./node_modules/.bin/mkdirp ./dist && ./node_modules/.bin/stylus --sourcemap-inline --out dist ./site/index.styl && ./node_modules/.bin/cleancss --source-map-inline-sources ./dist/index.css -o ./dist/index.css",
+    "css:dist": "./node_modules/.bin/mkdirp ./dist && ./node_modules/.bin/stylus --sourcemap-inline --out dist ./site/index.styl && ./node_modules/.bin/cleancss ./dist/index.css -o ./dist/index.css",
+    "img": "./node_modules/.bin/mkdirp ./dist && ./node_modules/.bin/shx cp -R ./site/img/ ./dist/",
+    "img:dist": "npm run img && ./node_modules/.bin/imagemin ./dist/img/**/* --out-dir ./dist/img",
+    "robots": "./node_modules/.bin/mkdirp ./dist && ./node_modules/.bin/shx cp ./site/robots.txt ./dist/robots.txt",
+    "watch": "./node_modules/.bin/run-p watch:js watch:css watch:img watch:robots",
+    "watch:js": "onchange 'site/**/*.js' -i -- npm run js",
+    "watch:css": "onchange 'site/**/*.styl' -i -- npm run css",
+    "watch:img": "onchange 'site/img/**' -i -- npm run img",
+    "watch:robots": "onchange 'site/robots.txt' -i -- npm run robots",
+    "serve": "./node_modules/.bin/http-server -p 8765 ./dist",
+    "run": "./node_modules/.bin/run-p watch serve"
+  },
+  "transform": [
+    [
+      "babelify",
+      {
+        "comments": false
+      }
+    ]
+  ],
+  "dependencies": {
+    "firebase": "^3.1.0",
+    "sidenavjs": "0.0.1"
+  }
+}
