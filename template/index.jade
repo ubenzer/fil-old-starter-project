@@ -3,7 +3,11 @@ extends ./layouts/main.jade
 block content
   //h3 Collection: #{category.belongsToCollection.id} Category: #{category.title} Page: #{page.pageNumber}
   .main-container
-    each content in page.contents
-      include ./partials/post-excerpt
+    .main-content
+      each content in page.contents
+        include ./partials/post-excerpt
 
-    include ./partials/pagination
+      include ./partials/pagination
+
+    .sidebar
+      include ./partials/sidebar
