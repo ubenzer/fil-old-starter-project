@@ -1,7 +1,7 @@
 article.card.excerpt(id="#{content.contentId}")
   .card-contents
     .date #{content.createDate.locale(global.template.locale).format(global.template.dateFormat)}
-    h1
+    h1.title
       a(href=content.getUrl()) #{content.title}
     .content !{content.htmlExcerpt}
   .card-actions
