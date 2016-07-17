@@ -51,6 +51,7 @@
     ]
   ],
   "dependencies": {
+    "document-offset": "^1.0.4",
     "firebase": "^3.2.0",
     "sidenavjs": "0.0.1"
   }

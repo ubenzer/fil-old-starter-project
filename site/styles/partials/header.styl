@@ -1,35 +1,72 @@
+.main-container
+  +gt-sm()
+    margin-top -1 * ($header_height / 2)
+
 header
   align-items stretch
   display flex
   flex-flow column
-
-body
-  margin-top 56px
-
-app-bar
-  display flex
-  align-items center
-  position fixed
   height 56px
-  padding 12px 10px
-  top 0
-  left 0
-  right 0
-  z-index 1
-  shadow-1()
-  primary-block()
 
-  h1.logo
-    height 36px
-    line-height 36px
-    flex-grow 1
-    margin 0
-    padding-left 16px
-    a
-      display inline-block
+  +gt-sm()
+    background url(img/sidenav-bg.jpg) center bottom no-repeat
+    background-size cover
+    height $header_height
+    //transition background-image 0.2s ease-in-out
+    &.opaque
+      //background none
+      app-bar
+        shadow-1()
+        primary-block()
+        text-shadow none
+
+  app-bar
+    display flex
+    align-items center
+    position fixed
+    height 56px
+    padding 12px 10px
+    top 0
+    left 0
+    right 0
+    z-index 1
+    shadow-1()
+    primary-block()
+
+    +gt-sm()
+      transition all 0.3s ease-in-out
+      background-color transparent
+      shadow-0()
+      color rgba(255, 255, 255, 0.8)
+      text-shadow 0 0 5px rgba(0, 0, 0, 0.8)
+
+    h1.logo
       height 36px
       line-height 36px
-      font-weight 500
-      font-size 20px
-      color $text_default_light
       margin 0
+      padding 0 16px
+      a
+        display inline-block
+        height 36px
+        line-height 36px
+        font-weight 500
+        font-size 20px
+        color $text_default_light
+        margin 0
+
+    ul.featured-categories
+      display none
+      padding 0
+      list-style none
+      +gt-sm()
+        display flex
+      li
+        height 36px
+        line-height 36px
+        margin 0
+        padding 0 16px
+        a
+          color $text_default_light
+          text-decoration none
+    .spacer
+      flex-grow 1

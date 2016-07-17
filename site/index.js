@@ -8,6 +8,8 @@ let firebase = require("../node_modules/firebase/firebase-browser.js");
 let u = require("./js/utils.js");
 
 u.onready(function() {
+  require("./js/header.js").run();
+
   firebase.initializeApp({
     apiKey: "AIzaSyACGkNnjhxDCa5R1nLrVS5jeqWUm1GIB1c",
     authDomain: "ubenzer.firebaseapp.com",
