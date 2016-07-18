@@ -58,6 +58,7 @@ var config = {
     authorShortBio: "Software Engineer in Berlin",
     readContent: "Devamını Oku",
     analyticsAccount: "UA-509698-8",
+    googleAdClientId: "ca-pub-1459962636012287",
     featuredCategories: [  // Categories that will be shown on main navigation (ordered)
       "category/Programming",
       "category/Programming/SubCategory"
