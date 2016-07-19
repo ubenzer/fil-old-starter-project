@@ -29,12 +29,13 @@ ul, li
 
 .main-container
   width: 100%
+  max-width 1000px
   display flex
-  +gt-md()
-    align-self center
-    max-width 1200px
+  justify-content center
+  align-self center
   .main-content
     flex-grow 1
+    max-width 740px
   .sidebar
     width 25%
     flex-grow 0
