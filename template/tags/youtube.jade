@@ -3,8 +3,6 @@ div.youtube.video
     var pattern = /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/; // Source: http://stackoverflow.com/a/27728417/158523
     var id = data;
     var parts = data.match(pattern);
-    if (parts.length === 2) {
-      id = parts[1];
-    }
+    if (parts !== null && parts.length === 2) { id = parts[1]; }
 
   iframe(type="text/html", src="https://www.youtube.com/embed/#{id}?modestbranding=1&showinfo=0&rel=0", frameborder="0", allowfullscreen)
