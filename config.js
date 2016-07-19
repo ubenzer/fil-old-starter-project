@@ -66,6 +66,7 @@ var config = {
     ]
   },
   media: {
+    defaultWidth: 500,
     imageWidths: [200, 500, 1000, 1500, 2000],
     imageExtensions: ["webp"]
   },
