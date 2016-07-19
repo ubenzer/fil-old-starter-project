@@ -55,6 +55,7 @@ var config = {
     locale: "tr",
     siteName: "UBenzer",
     authorName: "Umut Benzer",
+    baseUrl: "https://ubenzer.com", // used for canonical urls
     authorShortBio: "Software Engineer in Berlin",
     readContent: "Devamını Oku",
     analyticsAccount: "UA-509698-8",
