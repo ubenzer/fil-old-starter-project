@@ -55,7 +55,6 @@ var config = {
     locale: "tr",
     siteName: "UBenzer",
     authorName: "Umut Benzer",
-    baseUrl: "https://ubenzer.com", // used for canonical urls
     authorShortBio: "Software Engineer in Berlin",
     readContent: "Devamını Oku",
     analyticsAccount: "UA-509698-8",
@@ -75,6 +74,9 @@ var config = {
     templateOptions: {
       // template specific json customFn(content) return object
     }
+  },
+  general: {
+    baseUrl: "https://ubenzer.com", // used for canonical urls
   }
 };
 

@@ -32,24 +32,12 @@ u.onready(function() {
     .forEach((articleDOM) => {
       let id = articleDOM.getAttribute("id").replace(new RegExp("/", "g"), "___");
 
-      firebase.database().ref("comments/byPost/" + id)
-        .once('value')
+      firebase.database().ref("entry/byContentId/" + id)
+        .once("value")
         .then((snapshot) => {
-          articleDOM.querySelector(".comment-count").innerText = Object.keys(snapshot.val()).length;
+          let maybeComments = snapshot.val();
+          let commentCount = maybeComments ? Object.keys(maybeComments).length : 0;
+          articleDOM.querySelector(".comment-count").innerText = commentCount;
         });
     });
-
-  if (id) {
-    firebase.database().ref("comments/byPost/" + id).orderByKey().once('value')
-      .then(function(snapshot) {
-        console.log(snapshot.val());
-        let html = "";
-        snapshot.forEach(function(commentData) {
-          let comment = commentData.val();
-          html += "<h3>" + comment.name + "</h3><p>" + comment.text + "</p>";
-        });
-
-        document.getElementById("comments").innerHTML = html;
-      });
-  }
 });

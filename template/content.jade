@@ -4,7 +4,7 @@ block title
   title #{content.title} | #{global.template.siteName}
 
 block meta
-  link(rel="canonical", href="#{global.template.baseUrl}#{content.getUrl()}")
+  link(rel="canonical", href="#{global.general.baseUrl}#{content.getUrl()}")
 
 block content
   //h3 Collection: #{category.belongsToCollection.id} Category: #{category.title} Page: #{page.pageNumber}

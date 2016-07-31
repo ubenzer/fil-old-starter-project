@@ -1,7 +1,18 @@
-article.card(id="content-#{content.contentId}")
-  .card-contents
-    .date #{content.createDate.locale(global.template.locale).format(global.template.dateFormat)}
-    h1.title
-      a(href=content.getUrl()) #{content.title}
-    .content !{content.htmlContent}
-    div#comments
+article(id="content-#{content.contentId}")
+  .card.contents
+    .card-contents
+      .date #{content.createDate.locale(global.template.locale).format(global.template.dateFormat)}
+      h1.title
+        a(href=content.getUrl()) #{content.title}
+      .content !{content.htmlContent}
+      - var id = content.contentId.replace(new RegExp("/", "g"), "___");
+  h2 Yorumlar (beta)
+  iframe(id="comments" src="https://ubenzer.firebaseapp.com/content/#{id}")
+  script.
+    (function() {
+      window.addEventListener("message", function(message) {
+        if (message.data.messageType === "height") {
+          document.getElementById("comments").style.height = message.data.data + "px";
+        }
+      }, false);
+    })();
