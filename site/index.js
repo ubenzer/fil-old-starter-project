@@ -28,16 +28,18 @@ u.onready(function() {
       sidenav.open(); // or sidenav.close
     });
 
-  document.querySelectorAll("article.excerpt")
-    .forEach((articleDOM) => {
-      let id = articleDOM.getAttribute("id").replace(new RegExp("/", "g"), "___");
+  let allExcerpts = document.querySelectorAll("article.excerpt");
+  for (var i = allExcerpts.length; i--;) {
+    let articleDOM = allExcerpts[i];
+    let id = articleDOM.getAttribute("id").replace(new RegExp("/", "g"), "___");
 
-      firebase.database().ref("entry/byContentId/" + id)
-        .once("value")
-        .then((snapshot) => {
-          let maybeComments = snapshot.val();
-          let commentCount = maybeComments ? Object.keys(maybeComments).length : 0;
-          articleDOM.querySelector(".comment-count").innerText = commentCount;
-        });
-    });
+    firebase.database().ref("entry/byContentId/" + id)
+      .once("value")
+      .then((snapshot) => {
+        let maybeComments = snapshot.val();
+        let commentCount = maybeComments ? Object.keys(maybeComments).length : 0;
+        articleDOM.querySelector(".comment-count").innerText = commentCount;
+      });
+  }
+
 });
