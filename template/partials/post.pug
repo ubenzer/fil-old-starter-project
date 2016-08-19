@@ -1,4 +1,4 @@
-article(id="content-#{content.contentId}")
+article(id="content-" + content.contentId)
   .card.contents
     .card-contents
       .date #{content.createDate.locale(global.template.locale).format(global.template.dateFormat)}
@@ -7,7 +7,7 @@ article(id="content-#{content.contentId}")
       .content !{content.htmlContent}
       - var id = content.contentId.replace(new RegExp("/", "g"), "___");
   h2 Yorumlar (beta)
-  iframe(id="comments" src="https://ubenzer.firebaseapp.com/content/#{id}")
+  iframe(id="comments" src="https://ubenzer.firebaseapp.com/content/" + id)
   script.
     (function() {
       window.addEventListener("message", function(message) {
