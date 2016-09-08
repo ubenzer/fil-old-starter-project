@@ -1,7 +1,8 @@
 ---
 created: 2016-07-14
-category:
-  - Kişisel
+taxonomy:
+  category:
+    - Kişisel
 ---
 # Alles gute zum Geburstag Ubenzer.com*
 
@@ -29,4 +30,4 @@ Bu site statik site yaratıcı fil ile yaratıldı ve aylık sadece 0,20€ gibi
 
 [Proje'nin Github sayfasına gitmek için buraya tıklayın.](https://github.com/ubenzer/fil){new}
 
-![fil](@2016/05/statik-site-yaratici-fil@/fil.jpg){link}
+![fil](@posts/2016/05/statik-site-yaratici-fil@/fil.jpg){link}

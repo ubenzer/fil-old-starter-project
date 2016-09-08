@@ -6,5 +6,6 @@ each categoryCode in (global.template.featuredCategories || [])
     .find(function(x) { return x.id === paths[1]; });
     for (var i = 2; i < paths.length; i++)
     category = category.subCategories.find(function(x) { return x.id; });
-  li
-    a(href="#{category.paginatedContents[0].url}") #{category.title}
+  if category
+    li
+      a(href=category.paginatedContents[0].url) #{category.title}

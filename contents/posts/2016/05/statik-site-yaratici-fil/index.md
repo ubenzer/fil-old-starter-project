@@ -1,9 +1,10 @@
 ---
 created: 2016-05-23
-category:
-  - Bilgisayar
-  - JavaScript
-  - Bilgisayar/Programlama
+taxonomy:
+  category:
+    - Bilgisayar
+    - JavaScript
+    - Bilgisayar/Programlama
 ---
 # Statik Site Yaratıcı: Fil
 

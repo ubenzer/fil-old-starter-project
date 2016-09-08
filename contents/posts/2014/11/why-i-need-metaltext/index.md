@@ -1,9 +1,10 @@
 ---
 
 created: 2014-11-17
-category:
-  - Programming
-  - Programming/SubCategory
+taxonomy:
+  category:
+    - Programming
+    - Programming/SubCategory
   
 ---
 # I need metaltext

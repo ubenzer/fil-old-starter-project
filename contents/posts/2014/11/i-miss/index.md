@@ -1,8 +1,9 @@
 ---
 
 created: 2014-10-22
-category:
-  - Programming/SubCategory
+taxonomy:
+  category:
+    - Programming/SubCategory
   
 ---
 # Am I missing something?

@@ -2,8 +2,8 @@
 
 created: 2016-04-11
 title: Deneme 123
-
-category: "Deneme"
+taxonomy:
+  category: "Deneme"
 
 ---
 
@@ -22,7 +22,7 @@ vardık. [alt text](asset1.txt){main, sekonder}
 
 Funky character test [here](fäünky föolder/funky file näme.txt)!
 
-Link to [post with funky id](@2016/04/fänky post name)
+Link to [post with funky id](@posts/2016/04/fänky post name)
 
 Şu an Berlin'de dördüncü ayımız.
 

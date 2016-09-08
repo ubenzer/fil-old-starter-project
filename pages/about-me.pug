@@ -1,0 +1,14 @@
+extends ../template/layouts/main
+
+block title
+  title About | #{global.template.siteName}
+
+block content
+  .main-container
+    .main-content ahaha
+      //#{contents.aboutMe.getHtml()}
+
+      //each job in collections.jobs
+      //  #{job}
+    .sidebar
+      include ../template/partials/sidebar

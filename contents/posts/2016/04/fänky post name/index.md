@@ -1,9 +1,10 @@
 ---
 
 created: 2016-05-01
-category:
-  - Bilmuh'çular için
-  - Hayat
+taxonomy:
+  category:
+    - Bilmuh'çular için
+    - Hayat
 ---
 
 # İş Başvurusunda Yapılmaması Gerekenler
