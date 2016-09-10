@@ -6,13 +6,14 @@ article(id="content-" + content.contentId)
         a(href=content.getUrl()) #{content.title}
       .content !{content.htmlContent}
       - var id = content.contentId.replace(new RegExp("/", "g"), "___");
-  h2 Yorumlar (beta)
-  iframe(id="comments" src="https://ubenzer.firebaseapp.com/content/" + id)
-  script.
-    (function() {
-      window.addEventListener("message", function(message) {
-        if (message.data.messageType === "height") {
-          document.getElementById("comments").style.height = message.data.data + "px";
-        }
-      }, false);
-    })();
+  if global.template.enableComments
+    h2 Yorumlar (beta)
+    iframe(id="comments" src="https://ubenzer.firebaseapp.com/content/" + id)
+    script.
+      (function() {
+        window.addEventListener("message", function(message) {
+          if (message.data.messageType === "height") {
+            document.getElementById("comments").style.height = message.data.data + "px";
+          }
+        }, false);
+      })();

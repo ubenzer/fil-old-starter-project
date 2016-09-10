@@ -26,6 +26,7 @@ var config = {
     definition: [
       {
         id: "all",
+        render: false, // don't produce output
         categoryFn: function () {
           return ["all"]; // returns category id for given content
         },
@@ -62,7 +63,8 @@ var config = {
     featuredCategories: [  // Categories that will be shown on main navigation (ordered)
       "category/Programming",
       "category/Programming/SubCategory"
-    ]
+    ],
+    enableComments: false
   },
   media: {
     defaultWidth: 500,
