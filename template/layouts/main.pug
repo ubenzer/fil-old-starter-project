@@ -1,5 +1,5 @@
 doctype html
-html(lang="#{global.template.locale}")
+html(lang=global.template.locale)
   head
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -35,9 +35,6 @@ html(lang="#{global.template.locale}")
 
       block content
 
-    block scripts
-      script.
-        var id = null;
     script(src="/index.js")
     include ../partials/ganalytics
     include ../partials/adsense
