@@ -1,9 +1,10 @@
 "use strict";
-var config = {
+let config = {
   build: {
-    contentPath: "./contents",
-    skeletonPath: ".",
-    buildPath: "./dist",
+    contentPath: "contents",
+    templatePath: "template",
+    pagePath: "pages",
+    buildPath: "dist",
     siteBuildScript: "npm run compile"
   },
   collections: {
