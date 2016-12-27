@@ -20,7 +20,7 @@
     "imagemin-cli": "^3.0.0",
     "mkdirp": "^0.5.1",
     "npm-run-all": "^3.1.1",
-    "onchange": "^3.0.2",
+    "onchange": "^3.2.1",
     "shx": "^0.2.0",
     "stylus": "^0.54.5",
     "uglify-js": "^2.7.4"
