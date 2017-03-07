@@ -1,6 +1,8 @@
 Fil Starter Project
 ===================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ubenzer/fil-starter-project.svg)](https://greenkeeper.io/)
+
 [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
 This repository contains a [fil](https://github.com/ubenzer/fil) project with a decent looking UI and sample posts.
