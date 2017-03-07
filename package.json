@@ -23,7 +23,7 @@
     "onchange": "^3.0.2",
     "shx": "^0.2.0",
     "stylus": "^0.54.5",
-    "uglify-js": "^2.7.4"
+    "uglify-js": "^2.8.1"
   },
   "scripts": {
     "compile": "npm run js:dist && npm run css:dist && npm run img:dist && npm run robots",
